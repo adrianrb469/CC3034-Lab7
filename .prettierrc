@@ -1,0 +1,13 @@
+{
+  "singleQuote": true,
+  "trailingComma": "es5",
+  "semi": true,
+  "overrides": [
+    {
+      "files": "*.jsx",
+      "options": {
+        "semi": false
+      }
+    }
+  ]
+}
