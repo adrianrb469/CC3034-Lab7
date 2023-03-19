@@ -1,0 +1,18 @@
+.logo-text {
+  background-color: aliceblue;
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+.logo {
+  width: 200px;
+  height: 200px;
+  background-image: url('https://duckduckgo.com/assets/logo_homepage.alt.v108.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #1c1c1c;
+}
+
+.text {
+  color: red;
+}

@@ -1,0 +1,25 @@
+.card {
+  background: #282828;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  width: 315px;
+  min-height: 322px;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  text-align: center;
+}
+
+.card > p {
+  color: #fff;
+  font-weight: 300;
+  line-height: 1.4em;
+}
+
+.card > p > a {
+  color: #678fff;
+  text-decoration: none;
+  font-weight: 800;
+}

@@ -1,0 +1,12 @@
+.badge-list {
+  width: 430px;
+  list-style-type: none;
+  display: flex;
+
+  justify-content: space-between;
+}
+
+.badge-item {
+  display: flex;
+  gap: 4px;
+}
