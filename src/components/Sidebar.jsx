@@ -37,11 +37,12 @@ function SideBar() {
   return (
     <div>
       <ul className="sidebar-menulist">
-        {items.map((item, i) => (
-          <ul className="sidebar-group" key={i}>
-            <li className="sidebar-theme">{item.theme}</li>
-            {item.items.map((item, i) => (
-              <li className="sidebar-item" key={i}>
+        {items.map((item) => (
+          <ul className="sidebar-group" key={item.value}>
+            <li className="sidebar-theme">{item.themluee}</li>
+            {/* eslint-disable-next-line no-shadow */}
+            {item.items.map((item) => (
+              <li className="sidebar-item" key={item.value}>
                 {item}
               </li>
             ))}

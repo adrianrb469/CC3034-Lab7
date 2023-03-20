@@ -11,7 +11,6 @@ function App() {
   const [isOpen, setIsOpen] = useState(false)
 
   function toggleSideBar() {
-    console.log(isOpen)
     setIsOpen(!isOpen)
   }
 
@@ -19,7 +18,11 @@ function App() {
     <div className="app">
       <div className="topbar">
         <Dropdown />
-        <div className="sidebar-icon" onClick={toggleSideBar}>
+        <div
+          className="sidebar-icon"
+          onClick={toggleSideBar}
+          role="presentation"
+        >
           <svg
             className="menu-icon"
             version="1.1"
@@ -36,7 +39,11 @@ function App() {
         </div>
 
         <div className={`real-sidebar ${isOpen ? 'open' : ''}`}>
-          <i className="sidebar-close" onClick={toggleSideBar}>
+          <i
+            className="sidebar-close"
+            onClick={toggleSideBar}
+            role="presentation"
+          >
             ✕
           </i>
 

@@ -35,14 +35,16 @@ function Dropdown() {
   const [isOpen, setIsOpen] = useState(false)
 
   function toggleDropdown() {
-    console.log(isOpen)
     setIsOpen(!isOpen)
   }
 
   return (
     <div className={`dropdown ${isOpen ? 'open' : ''}`}>
-      <div className="dropdown-button" onClick={toggleDropdown}>
-        {/*horn*/}
+      <div
+        className="dropdown-button"
+        onClick={toggleDropdown}
+        role="presentation"
+      >
         <svg
           className="dropdown-icon"
           xmlns="http://www.w3.org/2000/svg"
@@ -58,7 +60,6 @@ function Dropdown() {
           />
         </svg>
 
-        {/*down*/}
         <svg
           className="dropdown-icon"
           version="1.1"
@@ -71,14 +72,14 @@ function Dropdown() {
           <path
             fill="#cccccc"
             d="M15.954 17.629l-8.374-8.335-2.813 2.721 11.188 10.728 11.28-10.772-2.793-2.713z"
-          ></path>
+          />
         </svg>
       </div>
       <ul className="dropdown-list">
-        {items.map((item, i) => (
-          <li key={i}>
+        {items.map((item) => (
+          <li key={item.value}>
             <a href={item.href}>
-              <img src={item.image} />
+              <img src={item.image} alt="akosidf" />
               <span>{item.label}</span>
             </a>
           </li>
