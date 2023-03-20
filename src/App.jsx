@@ -1,14 +1,48 @@
-import React from 'react'
+import { React, useState } from 'react'
 import Searchbar from './components/Searchbar'
 import Logo from './components/Logo'
 import BadgeList from './components/BadgeList'
 import Card from './components/Card'
+import SideBar from './components/Sidebar'
+import Dropdown from './components/DropDown'
 import './App.css'
 
 function App() {
+  const [isOpen, setIsOpen] = useState(false)
+
+  function toggleSideBar() {
+    console.log(isOpen)
+    setIsOpen(!isOpen)
+  }
+
   return (
     <div className="app">
-      <div className="topbar">pretend im the horn and the hamburger thing</div>
+      <div className="topbar">
+        <Dropdown />
+        <div className="sidebar-icon" onClick={toggleSideBar}>
+          <svg
+            className="menu-icon"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 32 32"
+          >
+            <title>menu</title>
+            <path fill="#cccccc" d="M0 4h30v4h-30v-4z" />
+            <path fill="#cccccc" d="M0 14h30v4h-30v-4z" />
+            <path fill="#cccccc" d="M0 24h30v4h-30v-4z" />
+          </svg>
+        </div>
+
+        <div className={`real-sidebar ${isOpen ? 'open' : ''}`}>
+          <i className="sidebar-close" onClick={toggleSideBar}>
+            ✕
+          </i>
+
+          <SideBar />
+        </div>
+      </div>
       <div className="center">
         <Logo />
         <Searchbar />
@@ -60,6 +94,23 @@ function App() {
       <h1 className="title title-big text-center">
         We don’t store your <br /> personal information. Ever.
       </h1>
+
+      <div className="center">
+        <h3 className="title text-center">
+          Our privacy policy is simple: we don’t collect <br /> or share any of
+          your personal information.
+        </h3>
+        <button type="button" className="button">
+          {' '}
+          Add DuckDuckGo to Chrome
+        </button>
+        <img
+          src="https://duckduckgo.com/assets/onboarding/bathroomguy/1-monster-v2--pre-animation.svg"
+          alt=""
+          className="monster"
+        />
+      </div>
+
       <svg
         className="content-info__curve"
         xmlns="http://www.w3.org/2000/svg"
